@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - Kampus{% endblock %}
+{% block content %}
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <div>
+      <h1 class="h4 mb-1">Dashboard</h1>
+      <div class="text-muted">Role: <span class="badge bg-secondary">{{ role }}</span></div>
+    </div>
+    {% if role == "DOSEN" %}
+      <a href="{% url 'accounts:dosen-only' %}" class="btn btn-outline-primary">Area Dosen</a>
+    {% endif %}
+  </div>
+
+  {% if role == "DOSEN" %}
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Rekap Nilai</h5>
+            <p class="text-muted">Akses cepat ke rekap nilai kelas yang Anda ampu.</p>
+            <a class="btn btn-sm btn-primary disabled">Lihat (demo)</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Persetujuan KRS</h5>
+            <p class="text-muted">Setujui/komentari KRS mahasiswa.</p>
+            <a class="btn btn-sm btn-outline-secondary disabled">Buka (demo)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">KRS</h5>
+            <p class="text-muted">Rencanakan studi Anda semester ini.</p>
+            <a class="btn btn-sm btn-primary disabled">Isi (demo)</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Nilai</h5>
+            <p class="text-muted">Lihat nilai mata kuliah yang diambil.</p>
+            <a class="btn btn-sm btn-outline-secondary disabled">Lihat (demo)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

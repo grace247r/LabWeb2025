@@ -1,0 +1,113 @@
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2) 100%;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  line-height: 1.6rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  padding: 33px;
+}
+
+.profile-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2) 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: white;
+  border-radius: 50px;
+}
+
+.container input[type="email"],
+.container input[type="password"] {
+  width: 100%;
+  padding: 15px 15px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  gap: 100px;
+}
+
+.form-group a {
+  color: #667eea;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2) 100%;
+  border: none;
+  width: 100%;
+  padding: 20px 20px;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-btn img {
+  width: 13px;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 24px;
+  width: 100%;
+  font-size: 13px;
+  background-color: #fff;
+  color: #ea4335;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-btn:hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  color: #ea4335;
+}
+
+.auth-footer {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.auth-footer a {
+  color: #667eea;
+}
